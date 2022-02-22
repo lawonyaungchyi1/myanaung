@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Myanmar", sans-serif;
+  scrollbar-width: 5px;
+  scrollbar-color: #ff8800;
+  /* background-color: #4c5c68; */
+}
+
+/* the slides */
+.slick-slide {
+  width: 392px !important;
+  margin: 0 4px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0px;
+  border-radius: 20px;
+  width: 1200px;
+}
+
+@media only screen and (max-width: 300px) {
+  .slick-slide {
+    width: 200px !important;
+    margin: 0;
+  }
+  .slick-list {
+    width: 200px;
+  }
+}
+@media (min-width: 300px) and (max-width: 430px) {
+  .slick-slide {
+    width: 300px !important;
+    margin: 0;
+  }
+  .slick-list {
+    width: 300px;
+  }
+}
+@media (min-width: 760px) and (max-width: 913px) {
+  .slick-slide {
+    width: 640px !important;
+    margin: 0;
+  }
+  .slick-list {
+    width: 640px;
+  }
+}
+@media (min-width: 431px) and (max-width: 600px) {
+  .slick-slide {
+    width: 420px !important;
+    margin: 0;
+  }
+  .slick-list {
+    width: 420px;
+  }
+}
