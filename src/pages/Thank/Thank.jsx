@@ -17,6 +17,7 @@ import React, { useEffect, useState } from "react";
 import { DeleteOutline } from "@mui/icons-material";
 import { axiosInstance } from "../../config";
 import { useSelector } from "react-redux";
+import { adminId } from "../../Data/Materials";
 
 const Thank = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
@@ -57,7 +58,7 @@ const Thank = () => {
           <Name>ဥာဏ်လင်းထွန်း</Name>
         </NameContainer>
       </ThankTextContainer>
-      {currentUser.isAdmin ? (
+      {currentUser._id === adminId ? (
         <ContactNumberContainer>
           <Title>ဆက်သွယ်ထားသောဖုန်းနံပါတ်များ</Title>
           <NumberWrapper>
