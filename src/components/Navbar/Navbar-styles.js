@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { smallToLarge, topToBottom, opacityOfLink } from "./Navbar-keyframe";
 import {
   iphoneXr,
   surfacePro7,
@@ -14,7 +13,7 @@ export const Container = styled.header`
   top: 0;
   z-index: 10;
   background-color: #073b4c;
-  ${iphoneXr({ width: "100%" })};
+  ${iphoneXr({ width: "100vw" })};
   ${surfacePro7({ width: "100vw" })}
   ${surfaceDuo({ width: "100vw" })}
 `;
@@ -35,7 +34,6 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   height: 100px;
   margin-left: 60px;
-  animation: ${smallToLarge} 1s ease-in;
   z-index: 1;
   ${iphoneXr({ height: "50px" })};
   ${glaxyFold({ height: "30px" })};
@@ -48,7 +46,6 @@ export const LinksContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  animation: ${topToBottom} 1s ease-in;
   ${iphoneXr({ display: "none" })}
   ${surfaceDuo({ display: "none" })}
 `;
@@ -58,7 +55,6 @@ export const Links = styled.div`
   display: flex;
   justify-content: center;
   justify-items: center;
-  animation: ${opacityOfLink} 1s ease-in;
   cursor: pointer;
 `;
 

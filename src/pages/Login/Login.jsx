@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginFormLogo } from "../../Data/Images";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Spinner from "./../../components/Spinner/Spinner";
 import { toast } from "react-toastify";
 import { login, reset } from "./../../features/authSlice";
 import {
+  Container,
   FirstSection,
   SecondSection,
+  LogoContainer,
   Logo,
   Title,
   Form,
@@ -15,8 +17,20 @@ import {
   Input,
   Button,
   Error,
+  TitleContainer,
+  RegisterLinkContainer,
+  RegisterLink,
 } from "./Login-styles";
 import Joi from "joi";
+import {
+  buttonVariants,
+  titleVariants,
+  logoContainerVariants,
+  logoVariants,
+  containerVariants,
+  formVariants,
+} from "./Login-keyframes";
+import LoginTextAnimated from "./LoginTextAnimated";
 
 const Login = () => {
   const [errors, setErrors] = useState({});
@@ -90,7 +104,7 @@ const Login = () => {
   };
   useEffect(() => {
     if (isError) {
-      toast.error(message);
+      toast.error(message, { position: toast.POSITION.TOP_CENTER });
     }
 
     if (isSuccess || user) {
@@ -104,13 +118,33 @@ const Login = () => {
     return <Spinner />;
   }
   return (
-    <>
+    <Container variants={containerVariants} initial="hidden" animate="visible">
       <FirstSection>
-        <Logo src={loginFormLogo} />
-        <Title>Login to Lawon Yaung Chyi</Title>
+        <LogoContainer
+          variants={logoContainerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <Logo
+            src={loginFormLogo}
+            variants={logoVariants}
+            initial="hidden"
+            animate="visible"
+          />
+        </LogoContainer>
+        <TitleContainer
+          variants={titleVariants}
+          initial="hidden"
+          animate="hidden"
+        >
+          <Title variants={titleVariants} animate="visible" initial="hidden">
+            <LoginTextAnimated>Login to Lawon Yaung Chyi</LoginTextAnimated>
+          </Title>
+        </TitleContainer>
       </FirstSection>
       <SecondSection>
-        <Form onSubmit={onSubmit}>
+        <Form onSubmit={onSubmit} variants={formVariants}>
           <FormGroup>
             <Input
               type="email"
@@ -132,11 +166,18 @@ const Login = () => {
             <Error>{errors.password}</Error>
           </FormGroup>
           <FormGroup>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" variants={buttonVariants} whileHover="hover">
+              Submit
+            </Button>
           </FormGroup>
+          <RegisterLinkContainer>
+            <Link to="/myanaung/register" style={{ textDecoration: "none" }}>
+              <RegisterLink>Register</RegisterLink>
+            </Link>
+          </RegisterLinkContainer>
         </Form>
       </SecondSection>
-    </>
+    </Container>
   );
 };
 

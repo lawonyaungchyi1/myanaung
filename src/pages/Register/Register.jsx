@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginFormLogo } from "../../Data/Images";
 import {
+  Container,
   FirstSection,
   SecondSection,
+  LogoContainer,
   Logo,
   Title,
   Form,
@@ -11,12 +13,24 @@ import {
   Input,
   Button,
   Error,
+  TitleContainer,
+  LoginLink,
+  LoginLinkContainer,
 } from "./Register-styles";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { register, reset } from "./../../features/authSlice";
 import Spinner from "../../components/Spinner/Spinner";
 import Joi from "joi";
+import {
+  buttonVariants,
+  titleVariants,
+  logoContainerVariants,
+  logoVariants,
+  containerVariants,
+  formVariants,
+} from "./Register-keyframes";
+import RegisterTextAnimated from "./RegisterTextAnimated";
 
 const Register = () => {
   const [errors, setErrors] = useState({});
@@ -120,13 +134,34 @@ const Register = () => {
     return <Spinner />;
   }
   return (
-    <>
+    <Container variants={containerVariants} initial="hidden" animate="visible">
       <FirstSection>
-        <Logo src={loginFormLogo} />
-        <Title>Login to Lawon Yaung Chyi</Title>
+        <LogoContainer
+          variants={logoContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <Logo
+            src={loginFormLogo}
+            variants={logoVariants}
+            initial="hidden"
+            animate="visible"
+          />
+        </LogoContainer>
+        <TitleContainer
+          variants={titleVariants}
+          initial="hidden"
+          animate="hidden"
+        >
+          <Title variants={titleVariants} initial="hidden" animate="visible">
+            <RegisterTextAnimated>
+              Registeration Form For New Account
+            </RegisterTextAnimated>
+          </Title>
+        </TitleContainer>
       </FirstSection>
       <SecondSection>
-        <Form onSubmit={onSubmit}>
+        <Form onSubmit={onSubmit} variants={formVariants}>
           <FormGroup>
             <Input
               // type="text"
@@ -168,11 +203,18 @@ const Register = () => {
             <Error>{errors.password2}</Error>
           </FormGroup>
           <FormGroup>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" variants={buttonVariants} whileHover="hover">
+              Submit
+            </Button>
           </FormGroup>
+          <LoginLinkContainer>
+            <Link to="/myanaung/login" style={{ textDecoration: "none" }}>
+              <LoginLink>Login</LoginLink>
+            </Link>
+          </LoginLinkContainer>
         </Form>
       </SecondSection>
-    </>
+    </Container>
   );
 };
 

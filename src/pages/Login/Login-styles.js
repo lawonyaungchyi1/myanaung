@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { glaxyFold, iphoneXr } from "../../components/Responsive/responsive";
+import {
+  glaxyFold,
+  iphoneXr,
+  surfacePro7,
+} from "../../components/Responsive/responsive";
+import { motion } from "framer-motion";
+export const Container = styled(motion.div)``;
 
 export const FirstSection = styled.section`
   margin-top: 120px;
@@ -12,23 +18,24 @@ export const FirstSection = styled.section`
   ${iphoneXr({ marginTop: "70px" })}
 `;
 
-export const Logo = styled.img``;
+export const LogoContainer = styled(motion.div)``;
+export const Logo = styled(motion.img)``;
+export const TitleContainer = styled(motion.div)``;
 
-export const Title = styled.h3`
-  font-size: 30px;
-  font-family: "Redressed", cursive;
-  color: #ff9e00;
-  ${glaxyFold({ fontSize: "20px" })}
-`;
+export const Title = styled(motion.h3)``;
 
 export const SecondSection = styled.section``;
 
-export const Form = styled.form`
+export const Form = styled(motion.form)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  width: 70%;
+  margin: 0 auto;
+  ${iphoneXr({ width: "100%" })}
+  ${surfacePro7({ width: "100%" })}
 `;
 
 export const FormGroup = styled.div`
@@ -48,7 +55,7 @@ export const Input = styled.input`
   padding: 5px;
 `;
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   width: 100%;
   margin-top: 20px;
   min-width: 50%;
@@ -70,4 +77,28 @@ export const Error = styled.h6`
   width: 100%;
   height: 10px;
   color: #ee4266;
+`;
+
+export const DisplaySlicedTextContainer = styled.span`
+  overflow: hidden;
+  display: inline-block;
+`;
+export const DisplaySlicedText = styled(motion.span)`
+  font-size: 30px;
+  font-family: "Redressed", cursive;
+  ${glaxyFold({ fontSize: "20px" })}
+`;
+
+export const WrapperText = styled(motion.span)`
+  display: inline-block;
+`;
+
+export const RegisterLinkContainer = styled.div``;
+
+export const RegisterLink = styled.span`
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  cursor: pointer;
+  color: #219ebc;
+  text-decoration: none;
 `;

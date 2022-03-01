@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { iphoneXr, surfaceDuo } from "../Responsive/responsive";
 
 export const HamburgerMenuContainer = styled.div`
+  width: 100%;
   flex: 1;
   display: flex;
   justify-content: center;
