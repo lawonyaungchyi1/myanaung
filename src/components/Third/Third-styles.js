@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { iphoneXr, surfacePro7, surfaceDuo } from "./../Responsive/responsive";
 
@@ -19,13 +20,13 @@ export const ImageContainer = styled.div`
   ${iphoneXr({ width: "100%", height: "100%" })}
   ${surfaceDuo({ width: "100%" })}
 `;
-export const VolunteerLogo = styled.img`
+export const VolunteerLogo = styled(motion.img)`
   ${iphoneXr({ width: "100%" })};
   ${surfacePro7({ width: "50%", flex: "1" })}
   ${surfaceDuo({ width: "100%" })}
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer = styled(motion.div)`
   width: 50%;
   position: relative;
   ${iphoneXr({

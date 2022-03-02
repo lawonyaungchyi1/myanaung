@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { moveMainText } from "./Second-frame";
 import {
   glaxyFold,
   iphoneXr,
   surfaceDuo,
   surfacePro7,
 } from "./../Responsive/responsive";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
   height: 100vh;
@@ -28,7 +28,7 @@ export const Container = styled.div`
     height: "100vh",
   })}
 `;
-export const TextContainer = styled.div`
+export const TextContainer = styled(motion.div)`
   flex: 1;
   position: relative;
   ${surfaceDuo({
@@ -43,7 +43,6 @@ export const TextMain = styled.span`
   padding: 20px;
   color: #ffb300;
   font-weight: bolder;
-  animation: ${moveMainText} 0.5s ease-in-out;
   ${iphoneXr({ fontSize: "20px" })};
   ${glaxyFold({ fontSize: "16px", display: "block" })}
   ${surfacePro7({ fontSize: "22px" })}
@@ -88,7 +87,7 @@ export const LogoContainer = styled.div`
   align-items: center;
 `;
 
-export const DonationLogo = styled.img`
+export const DonationLogo = styled(motion.img)`
   ${iphoneXr({ width: "100%" })};
   ${surfacePro7({ flex: "1", width: "50%" })}
   ${surfaceDuo({ width: "100%" })}

@@ -74,7 +74,7 @@ const MessageSlide = () => {
     ],
   };
   return (
-    <div>
+    <>
       <Slider {...settings}>
         {messages.map((m) => (
           <MessageContainer key={m.id}>
@@ -87,7 +87,7 @@ const MessageSlide = () => {
           </MessageContainer>
         ))}
       </Slider>
-    </div>
+    </>
   );
 };
 

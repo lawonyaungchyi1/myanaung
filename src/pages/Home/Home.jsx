@@ -5,12 +5,12 @@ import Fourth from "../../components/Fourth/Fourth";
 import Footer from "../../components/Footer/Footer";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { reset } from "../../features/authSlice";
+import { useSelector } from "react-redux";
+import { Container } from "./Home-styles";
+import { homeVariants } from "./Home-keyframes";
 
 const Home = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
 
   useEffect(() => {
@@ -19,13 +19,18 @@ const Home = () => {
     }
   }, [user, navigate]);
   return (
-    <>
+    <Container
+      variants={homeVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <First />
       <Second />
       <Third />
       <Fourth />
       <Footer />
-    </>
+    </Container>
   );
 };
 
