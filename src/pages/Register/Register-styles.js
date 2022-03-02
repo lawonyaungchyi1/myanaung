@@ -65,7 +65,7 @@ export const Button = styled(motion.button)`
   padding: 4px;
   border-radius: 2px;
   cursor: pointer;
-  color: #355070;
+  color: #000;
   height: 40px;
   border: none;
   font-family: "Source Code Pro", monospace;

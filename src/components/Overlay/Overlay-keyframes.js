@@ -1,26 +1,26 @@
-export const loginVariants = {
+export const containerVariants = {
   hidden: {
-    x: -10,
     opacity: 0,
   },
   visible: {
-    x: 0,
     opacity: 1,
     transition: {
-      delay: 1,
+      delay: 0.6,
+      staggerChildren: 2,
     },
   },
 };
-export const registerVariants = {
+
+export const linkVariants = {
   hidden: {
-    x: -10,
-    opacity: 0,
+    y: -30,
+    opacity: 0.2,
   },
   visible: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
-      delay: 1.5,
+      delay: 0.7,
     },
   },
 };

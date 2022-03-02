@@ -30,3 +30,10 @@ export const MenuIcon = styled.div`
     cursor: "pointer",
   })}
 `;
+
+export const MenuIconStyles = {
+  fontSize: "30px",
+  textShadow: "0px 0px 8px 3px #fee440",
+  borderRadius: "4px",
+  color: "#ffbe0b",
+};

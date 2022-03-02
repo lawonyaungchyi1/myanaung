@@ -15,6 +15,7 @@ import { navLinks } from "../../Data/NavLinks";
 import { overlayCloseColor } from "../../Data/Materials";
 import { logout, reset } from "../../features/authSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { containerVariants, linkVariants } from "./Overlay-keyframes";
 
 const Overlay = ({ handleOpen }) => {
   const navigate = useNavigate();
@@ -28,7 +29,11 @@ const Overlay = ({ handleOpen }) => {
     navigate("/myanaung");
   };
   return (
-    <OverlayContainer>
+    <OverlayContainer
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <TitleContainer>
         <Title>လဝန်းရောင်ခြည်</Title>
       </TitleContainer>
@@ -53,7 +58,7 @@ const Overlay = ({ handleOpen }) => {
             </LogoutContainer>
           </>
         ) : (
-          <>
+          <LinkContainer variants={linkVariants}>
             <Link
               to="/myanaung/login"
               style={{ textDecoration: "none" }}
@@ -74,7 +79,7 @@ const Overlay = ({ handleOpen }) => {
                 Register
               </Links>
             </Link>
-          </>
+          </LinkContainer>
         )}
       </LinkContainer>
     </OverlayContainer>

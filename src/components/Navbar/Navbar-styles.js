@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import {
   iphoneXr,
@@ -50,7 +51,7 @@ export const LinksContainer = styled.div`
   ${surfaceDuo({ display: "none" })}
 `;
 
-export const Links = styled.div`
+export const Links = styled(motion.div)`
   color: #ffb300;
   display: flex;
   justify-content: center;

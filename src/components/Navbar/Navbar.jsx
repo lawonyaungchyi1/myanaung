@@ -14,6 +14,7 @@ import { formLogo } from "../../Data/Images";
 import { useSelector, useDispatch } from "react-redux";
 import { Login, AccountCircle, Logout } from "@mui/icons-material";
 import { logout, reset } from "../../features/authSlice";
+import { loginVariants, registerVariants } from "./Navbar-keyframe";
 
 const Navbar = ({ handleOpen, open }) => {
   const { user } = useSelector((state) => state.auth);
@@ -49,20 +50,28 @@ const Navbar = ({ handleOpen, open }) => {
             </LogoutContainer>
           </>
         ) : (
-          <>
+          <LinksContainer>
             <Link to="/myanaung/login" style={{ textDecoration: "none" }}>
-              <Links>
+              <Links
+                variants={loginVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <Login />
                 Login
               </Links>
             </Link>
             <Link to="/myanaung/register" style={{ textDecoration: "none" }}>
-              <Links>
+              <Links
+                variants={registerVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <AccountCircle />
                 Register
               </Links>
             </Link>
-          </>
+          </LinksContainer>
         )}
       </LinksContainer>
       <Hamburger handleOpen={handleOpen} open={open} />

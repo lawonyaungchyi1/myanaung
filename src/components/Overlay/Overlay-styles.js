@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const OverlayContainer = styled.div`
+export const OverlayContainer = styled(motion.div)`
   background-color: white;
   width: 100vw;
   height: 100vh;
@@ -18,7 +19,7 @@ export const CloseContainer = styled.div`
   cursor: pointer;
 `;
 
-export const LinkContainer = styled.div`
+export const LinkContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

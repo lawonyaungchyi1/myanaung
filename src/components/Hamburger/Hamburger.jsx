@@ -1,5 +1,9 @@
 import React from "react";
-import { HamburgerMenuContainer, MenuIcon } from "./Hamburger-styles";
+import {
+  HamburgerMenuContainer,
+  MenuIcon,
+  MenuIconStyles,
+} from "./Hamburger-styles";
 import { MenuOutlined } from "@mui/icons-material";
 
 const Hamburger = ({ handleOpen, open }) => {
@@ -7,7 +11,7 @@ const Hamburger = ({ handleOpen, open }) => {
     <>
       <HamburgerMenuContainer>
         <MenuIcon onClick={() => handleOpen(() => !open)}>
-          <MenuOutlined />
+          <MenuOutlined style={MenuIconStyles} />
         </MenuIcon>
       </HamburgerMenuContainer>
     </>
