@@ -33,10 +33,12 @@ export const Body = styled.div`
 `;
 
 export const Name = styled.div`
+  font-weight: 600;
   ${iphoneXr({ fontSize: "8px" })}
 `;
 
 export const Rank = styled.div`
+  font-weight: 600;
   ${iphoneXr({ fontSize: "8px" })}
 `;
 

@@ -57,12 +57,18 @@ export const Links = styled(motion.div)`
   justify-content: center;
   justify-items: center;
   cursor: pointer;
+  font-weight: 800;
+  user-select: none;
 `;
 
-export const LogoutContainer = styled.div`
+export const LogoutContainer = styled(motion.div)`
   cursor: pointer;
   color: #ffb300;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+
+export const logoutLogoStyles = {
+  fontWeight: "bold",
+};

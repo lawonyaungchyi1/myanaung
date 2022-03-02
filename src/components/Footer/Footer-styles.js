@@ -54,7 +54,9 @@ export const Left = styled.div`
 `;
 
 export const InvitationText = styled.div`
+  font-weight: 600;
   position: relative;
+  user-select: none;
   ${iphoneXr({ fontSize: "8px", width: "100%" })};
   ${surfaceDuo({ fontSize: "12px", width: "100%" })};
 `;
@@ -68,6 +70,7 @@ export const ContactContainer = styled.div`
 `;
 
 export const ToContact = styled.h3`
+  user-select: none;
   font-size: 30px;
   color: #ffb300;
   ${iphoneXr({ fontSize: "16px" })}
@@ -76,6 +79,8 @@ export const ToContact = styled.h3`
 `;
 
 export const Address = styled.div`
+  user-select: none;
+  font-weight: 600;
   height: 50px;
   ${iphoneXr({
     fontSize: "8px",
@@ -95,6 +100,8 @@ export const Address = styled.div`
 `;
 
 export const Email = styled.div`
+  user-select: none;
+  font-weight: 600;
   height: 50px;
   ${iphoneXr({ fontSize: "8px", height: "20px", marginTop: "14px" })};
   ${surfacePro7({
@@ -110,6 +117,8 @@ export const Email = styled.div`
 `;
 
 export const Phone = styled.div`
+  user-select: none;
+  font-weight: 600;
   height: 50px;
   ${iphoneXr({ fontSize: "8px", height: "20px" })};
   ${surfacePro7({
@@ -135,6 +144,7 @@ export const Right = styled.div`
   ${surfaceDuo({ height: "50%", width: "100%" })}
 `;
 export const LocationOnMap = styled.h3`
+  user-select: none;
   font-size: 40px;
   margin-bottom: 10px;
   color: #ffb300;
@@ -145,6 +155,8 @@ export const LocationOnMap = styled.h3`
 `;
 
 export const FoundationYear = styled.div`
+  user-select: none;
+  font-weight: 600;
   margin-top: 20px;
   ${iphoneXr({ fontSize: "8px", width: "200px" })};
   ${surfacePro7({ marginTop: "10px" })}
@@ -221,6 +233,8 @@ export const BottomContainer = styled.div`
 `;
 
 export const Text = styled.div`
+  user-select: none;
+  font-weight: 600;
   ${iphoneXr({ fontSize: "8px" })}
   ${surfaceDuo({ fontSize: "12px" })}
 `;
@@ -242,6 +256,7 @@ export const Logo = styled.div`
 `;
 
 export const FbText = styled.a`
+  user-select: none;
   color: #ffb300;
   &:hover {
     color: #ffd000;

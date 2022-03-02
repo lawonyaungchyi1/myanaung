@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import {
   iphoneXr,
@@ -54,11 +55,10 @@ export const Poem = styled.div`
   })}
 `;
 
-export const OpenComma = styled.img`
+export const OpenComma = styled(motion.img)`
   position: absolute;
   left: -44%;
   top: -44%;
-  animation: ${openCommaRotate} 0.5s ease-in;
   ${iphoneXr({
     width: "50px",
     left: "-14%",
@@ -78,7 +78,7 @@ export const OpenComma = styled.img`
     top: "-6%",
   })}
 `;
-export const CloseComma = styled.img`
+export const CloseComma = styled(motion.img)`
   position: absolute;
   right: -45%;
   bottom: 0;
@@ -140,6 +140,7 @@ export const Body = styled.div`
 `;
 
 export const Left = styled.div`
+  font-weight: 600;
   position: relative;
   font-size: 14px;
   animation: ${moveParaRight} 0.5s ease-in-out;
@@ -156,6 +157,7 @@ export const Left = styled.div`
 `;
 
 export const Right = styled.div`
+  font-weight: 600;
   position: relative;
   font-size: 14px;
   display: flex;
@@ -171,9 +173,8 @@ export const Right = styled.div`
   })}
 `;
 
-export const Img = styled.img`
+export const Img = styled(motion.img)`
   width: 400px;
-  animation: ${moveToLeft} 1s ease-in-out;
   ${iphoneXr({ width: "100%" })};
   ${surfacePro7({ width: "100%" })}
   ${surfaceDuo({ width: "50%" })}

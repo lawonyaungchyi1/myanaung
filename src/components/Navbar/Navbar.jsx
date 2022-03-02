@@ -7,6 +7,7 @@ import {
   Logo,
   Links,
   LogoutContainer,
+  logoutLogoStyles,
 } from "./Navbar-styles";
 import { Link, useNavigate } from "react-router-dom";
 import { navLinks } from "../../Data/NavLinks";
@@ -14,7 +15,11 @@ import { formLogo } from "../../Data/Images";
 import { useSelector, useDispatch } from "react-redux";
 import { Login, AccountCircle, Logout } from "@mui/icons-material";
 import { logout, reset } from "../../features/authSlice";
-import { loginVariants, registerVariants } from "./Navbar-keyframe";
+import {
+  loginVariants,
+  navLinkVariants,
+  registerVariants,
+} from "./Navbar-keyframe";
 
 const Navbar = ({ handleOpen, open }) => {
   const { user } = useSelector((state) => state.auth);
@@ -42,11 +47,22 @@ const Navbar = ({ handleOpen, open }) => {
                 style={{ textDecoration: "none" }}
                 key={link.id}
               >
-                <Links>{link.name}</Links>
+                <Links
+                  variants={navLinkVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {link.name}
+                </Links>
               </Link>
             ))}
-            <LogoutContainer onClick={onLogout}>
-              <Logout />
+            <LogoutContainer
+              onClick={onLogout}
+              variants={navLinkVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <Logout style={logoutLogoStyles} />
             </LogoutContainer>
           </>
         ) : (

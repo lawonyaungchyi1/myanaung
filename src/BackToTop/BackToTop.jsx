@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { ExpandLess } from "@mui/icons-material";
 import { useWindowScroll } from "react-use";
-import { ToTopButton, ToTopButtonContainer } from "./BackToTop-styles";
+import {
+  ToTopButton,
+  ToTopButtonContainer,
+  expandLessZIndex,
+} from "./BackToTop-styles";
 
 const BackToTop = () => {
   const { y: pageYOffset } = useWindowScroll();
@@ -22,7 +26,7 @@ const BackToTop = () => {
   }
 
   return (
-    <ToTopButtonContainer>
+    <ToTopButtonContainer style={expandLessZIndex}>
       <ToTopButton onClick={scrollToTop}>
         <ExpandLess />
       </ToTopButton>

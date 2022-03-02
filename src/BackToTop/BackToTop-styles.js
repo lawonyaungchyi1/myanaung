@@ -15,3 +15,7 @@ export const ToTopButton = styled.button`
   border-radius: 50%;
   color: white;
 `;
+
+export const expandLessZIndex = {
+  zIndex: 1000,
+};

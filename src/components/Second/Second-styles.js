@@ -62,6 +62,7 @@ export const TextSub = styled.div`
 `;
 
 export const Button = styled.button`
+  font-weight: 600;
   width: 106px;
   background-color: #ffcc00;
   position: absolute;

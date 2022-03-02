@@ -17,6 +17,7 @@ import {
   closeCommaImage,
   openCommaImage,
 } from "../../Data/Images";
+import { imageVariants, commaRotateVariants } from "./First-keyframe";
 
 const First = () => {
   return (
@@ -26,7 +27,12 @@ const First = () => {
           <Title>ပရဟိတအလုပ်ဆိုတာ</Title>
           <Body>
             <Left>
-              <OpenComma src={openCommaImage} />
+              <OpenComma
+                src={openCommaImage}
+                variants={commaRotateVariants}
+                initial="hidden"
+                animate="visible"
+              />
               နာမည်ကြီးသူတိုင်းလည်းမလုပ်ဘူး။ <br />
               ပိုက်ဆံရှိသူတိုင်းလည်းမလှူဘူး။ <br />
               ခွန်အားရှိသူတိုင်းလည်းမကူညီဘူး။
@@ -43,13 +49,23 @@ const First = () => {
               ကူညီချင်တဲ့စိတ်စေတနာတရားနဲ့
               <br />
               နှလုံးသားလှသူများသာလုပ်နိုင်တဲ့အလုပ်။
-              <CloseComma src={closeCommaImage} />
+              <CloseComma
+                src={closeCommaImage}
+                variants={commaRotateVariants}
+                initial="hidden"
+                animate="visible"
+              />
             </Right>
           </Body>
         </Poem>
       </PoemContainer>
       <PersonContainer>
-        <Img src={pyaePhyoZawImage} />
+        <Img
+          src={pyaePhyoZawImage}
+          variants={imageVariants}
+          initial="hidden"
+          animate="visible"
+        />
       </PersonContainer>
     </Container>
   );

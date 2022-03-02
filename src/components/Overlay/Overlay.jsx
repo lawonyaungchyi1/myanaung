@@ -40,7 +40,7 @@ const Overlay = ({ handleOpen }) => {
       <CloseContainer onClick={handleOpen}>
         <CloseOutlined color={overlayCloseColor} />
       </CloseContainer>
-      <LinkContainer>
+      <LinkContainer variants={linkVariants}>
         {user ? (
           <>
             {navLinks.map((link) => (
