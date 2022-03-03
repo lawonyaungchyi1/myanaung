@@ -4,6 +4,7 @@ import {
   iphoneXr,
   surfaceDuo,
   surfacePro7,
+  ipadAir,
 } from "./../Responsive/responsive";
 import { motion } from "framer-motion";
 
@@ -47,6 +48,7 @@ export const TextMain = styled.span`
   ${glaxyFold({ fontSize: "16px", display: "block" })}
   ${surfacePro7({ fontSize: "22px" })}
   ${surfaceDuo({ fontSize: "16px", top: "10%" })}
+  ${ipadAir({ top: "20%" })}
 `;
 
 export const TextSub = styled.div`
@@ -58,6 +60,7 @@ export const TextSub = styled.div`
   ${iphoneXr({ fontSize: "10px", width: "94%", top: "60%" })};
   ${surfacePro7({ fontSize: "14px", width: "88%" })}
   ${surfaceDuo({ fontSize: "12px", width: "88%", top: "40%" })}
+  ${ipadAir({ top: "40%" })}
 `;
 
 export const Button = styled.button`
@@ -78,6 +81,7 @@ export const Button = styled.button`
   ${iphoneXr({ bottom: "10%", fontSize: "10px" })};
   ${surfacePro7({ bottom: "7%", fontSize: "14px" })}
   ${surfaceDuo({ bottom: "20%", fontSize: "12px" })}
+  ${ipadAir({ bottom: "30%" })}
 `;
 
 export const LogoContainer = styled.div`

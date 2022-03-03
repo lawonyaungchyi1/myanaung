@@ -6,8 +6,9 @@ import {
   surfaceDuo,
 } from "../../components/Responsive/responsive";
 import { stretchWidth } from "./Members-keyframe";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   margin-top: 8%;
   ${iphoneXr({ marginTop: "18%" })}
 `;

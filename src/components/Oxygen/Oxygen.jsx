@@ -11,6 +11,7 @@ import {
 import Modal from "react-modal";
 import { CloseOutlined, PhoneEnabledOutlined } from "@mui/icons-material";
 import { phones } from "../../Data/Phone";
+import { wrapperVariants } from "./Oxygen-keyframes";
 const Oxygen = ({ open, handleOpen }) => {
   return (
     <>
@@ -22,7 +23,12 @@ const Oxygen = ({ open, handleOpen }) => {
           },
         }}
       >
-        <Wrapper>
+        <Wrapper
+          variants={wrapperVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
           <Title>
             အောက်ဆီဂျင်လှူဒါန်းရန်အတွက်အောက်ပါဖုန်းနံပါတ်များကိုဆက်သွယ်ပေးပါခင်ဗျာ။
           </Title>

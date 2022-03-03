@@ -114,7 +114,7 @@ const Post = ({ post }) => {
           <Name>{user.username}</Name>
           <Date>{format(post.createdAt)}</Date>
         </NameAndDateContainer>
-        {currentUser.isAdmin && (
+        {currentUser._id === adminId && (
           <DeleteContainer onClick={handleDelete}>
             <DeleteOutline />
           </DeleteContainer>

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { glaxyFold, iphoneXr, surfaceDuo } from "../Responsive/responsive";
 import { oxygenImage } from "../../Data/Images";
+import { motion } from "framer-motion";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   width: 50%;
   margin: 0 auto;
   height: 100%;

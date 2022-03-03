@@ -14,10 +14,15 @@ import { Facebook } from "@mui/icons-material";
 import { members } from "../../Data/Members";
 import MemberFooter from "../../components/MemberFooter/MemberFooter";
 import React from "react";
+import { memberContainerVariants } from "./Members-keyframe";
 
 const Members = () => {
   return (
-    <Container>
+    <Container
+      variants={memberContainerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <TitleContainer>
         <Title>အဖွဲ့ဝင်များနဲ့တွေ့ဆုံလိုက်ပါ။</Title>
         <AnimateRectangle></AnimateRectangle>

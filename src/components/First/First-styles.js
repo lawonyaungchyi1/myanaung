@@ -5,15 +5,8 @@ import {
   surfacePro7,
   surfaceDuo,
   glaxyFold,
+  ipadAir,
 } from "../Responsive/responsive";
-import {
-  moveToLeft,
-  upTitle,
-  moveParaRight,
-  moveParaLeft,
-  openCommaRotate,
-  closeCommaRotate,
-} from "./First-keyframe";
 
 export const Container = styled.div`
   width: 90%;
@@ -34,6 +27,9 @@ export const Container = styled.div`
     marginTop: "10%",
     width: "100vw",
     height: "100vh",
+  })}
+  ${ipadAir({
+    height: "100%",
   })}
 `;
 export const PoemContainer = styled.div`
@@ -82,7 +78,6 @@ export const CloseComma = styled(motion.img)`
   position: absolute;
   right: -45%;
   bottom: 0;
-  animation: ${closeCommaRotate} 0.5s ease-in;
   ${iphoneXr({
     position: "absolute",
     width: "50px",
@@ -113,7 +108,6 @@ export const Title = styled.div`
   font-weight: bold;
   color: #ffb300;
   text-align: center;
-  animation: ${upTitle} 0.5s ease-in-out;
   ${iphoneXr({ fontSize: "24px", display: "block" })};
   ${glaxyFold({ fontSize: "16px", display: "block" })}
   ${surfacePro7({ fontSize: "26px", display: "block" })}
@@ -143,7 +137,6 @@ export const Left = styled.div`
   font-weight: 600;
   position: relative;
   font-size: 14px;
-  animation: ${moveParaRight} 0.5s ease-in-out;
   ${iphoneXr({
     display: "block",
     width: "84%",
@@ -163,7 +156,6 @@ export const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: ${moveParaLeft} 0.5s ease-in-out;
   ${iphoneXr({ display: "block", width: "84%" })}
   ${glaxyFold({ fontSize: "12px", display: "block" })}
   ${surfaceDuo({
@@ -178,6 +170,7 @@ export const Img = styled(motion.img)`
   ${iphoneXr({ width: "100%" })};
   ${surfacePro7({ width: "100%" })}
   ${surfaceDuo({ width: "50%" })}
+${ipadAir({ width: "100%" })}
 `;
 
 export const PersonContainer = styled.div`

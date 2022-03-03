@@ -25,6 +25,14 @@ export const surfacePro7 = (props) => {
     } ;
   `;
 };
+//Responsive for surface Pro7
+export const ipadAir = (props) => {
+  return css`
+    @media (min-width: 780px) and (max-width: 822px) {
+      ${props}
+    } ;
+  `;
+};
 
 //Responsive for surface Duo
 export const surfaceDuo = (props) => {

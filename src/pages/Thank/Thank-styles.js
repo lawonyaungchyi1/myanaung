@@ -4,8 +4,9 @@ import {
   surfaceDuo,
   surfacePro7,
 } from "../../components/Responsive/responsive";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   width: 100%;
 `;
 

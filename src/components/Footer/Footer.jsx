@@ -30,12 +30,25 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { closeCommaImage, openCommaImage } from "../../Data/Images";
 import { nyanLinTunFbLink } from "../../Data/Materials";
 import { lawonyaungchyiFbLink } from "../../Data/Materials";
+import {
+  buttonContainerVariants,
+  leftContainerVariants,
+  rightContainerVariants,
+} from "./Footer-keyframes";
+import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+  });
   return (
-    <Container>
+    <Container ref={ref}>
       <Wrapper>
-        <Left>
+        <Left
+          variants={leftContainerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
           <ContactContainer>
             <ToContact>ဆက်သွယ်ရန်</ToContact>
             <Address>
@@ -67,7 +80,11 @@ const Footer = () => {
             </InvitationText>
           </Invitation>
         </Left>
-        <Right>
+        <Right
+          variants={rightContainerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
           <LocationOnMap>မြေပုံပေါ်တွင်တည်နေရာ</LocationOnMap>
           <Map>
             <MapContainer
@@ -97,7 +114,11 @@ const Footer = () => {
         </Right>
       </Wrapper>
 
-      <BottomContainer>
+      <BottomContainer
+        variants={buttonContainerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
         <Text>လဝန်းရောင်ခြည် မူပိုင်ခွင့်/၂၀၂၂</Text>
         <Text>
           Design & Developed By

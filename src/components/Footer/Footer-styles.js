@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { iphoneXr, surfacePro7, surfaceDuo } from "./../Responsive/responsive";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
   width: 90%;
@@ -25,7 +26,7 @@ export const Container = styled.div`
   })}
 `;
 
-export const Left = styled.div`
+export const Left = styled(motion.div)`
   margin-top: 10%;
   width: 50%;
   height: 60%;
@@ -133,7 +134,7 @@ export const Phone = styled.div`
   })}
 `;
 
-export const Right = styled.div`
+export const Right = styled(motion.div)`
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -211,7 +212,7 @@ export const Map = styled.div`
   ${surfaceDuo({ width: "100%" })}
 `;
 
-export const BottomContainer = styled.div`
+export const BottomContainer = styled(motion.div)`
   position: absolute;
   bottom: 0;
   width: 100%;

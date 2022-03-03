@@ -18,6 +18,7 @@ import { DeleteOutline } from "@mui/icons-material";
 import { axiosInstance } from "../../config";
 import { useSelector } from "react-redux";
 import { adminId } from "../../Data/Materials";
+import { thankContainerVariants } from "./Thank-keyframes";
 
 const Thank = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
@@ -48,7 +49,11 @@ const Thank = () => {
     }
   };
   return (
-    <Container>
+    <Container
+      variants={thankContainerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <ThankTextContainer>
         <ThankText>
           လဝန်းရောင်ခြည်အဖွဲ့သားအားလုံးနှင့်အလှူရှင်များကိုကျေးဇူးတင်ပါသည်။

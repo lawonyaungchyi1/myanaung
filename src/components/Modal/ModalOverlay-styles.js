@@ -6,8 +6,9 @@ import {
   surfaceDuo,
 } from "../Responsive/responsive";
 import { popUp } from "./ModalOverlay-keyframe";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;

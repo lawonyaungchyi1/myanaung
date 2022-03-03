@@ -8,3 +8,15 @@ export const popUp = keyframes`
 50% {
     opacity: 0.5;
 }`;
+
+export const modalContainerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    },
+  },
+};

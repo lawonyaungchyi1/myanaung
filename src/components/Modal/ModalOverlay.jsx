@@ -26,6 +26,7 @@ import React from "react";
 import { axiosInstance } from "./../../config";
 import { useSelector } from "react-redux";
 import Joi from "joi";
+import { modalContainerVariants } from "./ModalOverlay-keyframe";
 
 Modal.setAppElement("#root");
 toast.configure();
@@ -118,7 +119,13 @@ const ModalOverlay = ({ open, handleOpen }) => {
         },
       }}
     >
-      <Container first={first} second={second}>
+      <Container
+        first={first.toString()}
+        second={second.toString()}
+        variants={modalContainerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Title first={first} second={second}>
           ဘယ်လိုကူညီမှာလဲ။
         </Title>
